@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Oct 08 2015 17:13:33 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Oct 08 2015 19:56:57 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1386,6 +1386,81 @@ layerB.centerY(<span class="hljs-number">20</span>)
 <span class="hljs-comment"># Output: 0, 220</span>
 </code></pre>
 <h2 id="layer-pixelalign"><a name="layer-pixelalign" class="plugin-anchor" href="#layer-pixelalign"><span class="fa fa-link"></span></a>layer.pixelAlign()</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x5C5E;&#x6027;&#x6570;&#x503C;&#x53D6;&#x6574;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+    <span class="hljs-attribute">x</span>: <span class="hljs-number">100.18293</span>
+    <span class="hljs-attribute">y</span>: <span class="hljs-number">10.12873</span>
+
+layerA.pixelAlign()
+
+<span class="hljs-built_in">print</span> layerA.x, layerA.y
+<span class="hljs-comment"># Output: 100, 10</span>
+</code></pre>
+<h2 id="layer-screenframe-object"><a name="layer-screenframe-object" class="plugin-anchor" href="#layer-screenframe-object"><span class="fa fa-link"></span></a>layer.screenFrame <code>&lt;object&gt;</code></h2>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x6216;&#x8005;&#x6355;&#x6349;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5FFD;&#x7565;&#x56FE;&#x5C42;&#x7684;&#x7236;&#x56FE;&#x5C42;&#x7EE7;&#x627F;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x3002;&#x6216;&#x8005;&#x56FE;&#x5C42;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+    <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
+
+layerB = <span class="hljs-keyword">new</span> Layer
+    <span class="hljs-attribute">superLayer</span>: layerA
+    <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
+
+<span class="hljs-built_in">print</span> layerB.screenFrame
+<span class="hljs-comment"># Output: { x: 200, y: 0, width: 100, height: 100 }</span>
+
+layerB.screenFrame =
+  <span class="hljs-attribute">x</span>: <span class="hljs-number">400</span>
+  <span class="hljs-attribute">y</span>: <span class="hljs-number">0</span>
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>
+
+<span class="hljs-built_in">print</span> layerB.x
+<span class="hljs-comment"># Output: 300</span>
+</code></pre>
+<h2 id="layer-contentframe"><a name="layer-contentframe" class="plugin-anchor" href="#layer-contentframe"><span class="fa fa-link"></span></a>layer.contentFrame()</h2>
+<p><code>&#x8FD4;&#x56DE;: Object</code>
+&#x8BA1;&#x7B97;&#x6240;&#x6709;&#x5B50;&#x56FE;&#x5C42;&#x76F8;&#x52A0;&#x7684;&#x603B;&#x5927;&#x5C0F;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+  <span class="hljs-attribute">x</span>: <span class="hljs-number">0</span>
+  <span class="hljs-attribute">y</span>: <span class="hljs-number">100</span>
+
+layerC = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+  <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
+  <span class="hljs-attribute">y</span>: <span class="hljs-number">300</span>
+
+<span class="hljs-built_in">print</span> layerA.contentFrame()
+<span class="hljs-comment"># Output: { x: 0, y: 0, width: 400, height: 100 }</span>
+</code></pre>
+<h2 id="layer-centerframe"><a name="layer-centerframe" class="plugin-anchor" href="#layer-centerframe"><span class="fa fa-link"></span></a>layer.centerFrame()</h2>
+<p><code>&#x8FD4;&#x56DE;: Object</code>
+&#x8BA1;&#x7B97;&#x5728;&#x5F53;&#x5929;&#x56FE;&#x5C42;&#x7684;&#x7236;&#x56FE;&#x5C42;&#x4E2D;&#x5C45;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7236;&#x56FE;&#x5C42;&#xFF0C;&#x5219;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x5C45;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">500</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">500</span>
+
+layerB = <span class="hljs-keyword">new</span> Layer
+    <span class="hljs-attribute">superLayer</span>: layerA
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>
+
+<span class="hljs-built_in">print</span> layerB.centerFrame()
+<span class="hljs-comment"># Output: { x: 200, y: 200, width: 100, height: 100 }</span>
+</code></pre>
+<h2 id="layer-backgroundcolor-string"><a name="layer-backgroundcolor-string" class="plugin-anchor" href="#layer-backgroundcolor-string"><span class="fa fa-link"></span></a>layer.backgroundColor <code>&lt;string&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x80CC;&#x666F;&#x8272;&#x3002;&#x989C;&#x8272;&#x662F;&#x5728; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">CSS &#x989C;&#x8272;&#x683C;&#x5F0F;</a> &#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E3A;&#x4E86;&#x8BA9;&#x4F60;&#x770B;&#x5F97;&#x5230;&#xFF0C;&#x56FE;&#x5C42;&#x7684;&#x9ED8;&#x8BA4;&#x80CC;&#x666F;&#x8272;&#x662F;&#x6DE1;&#x84DD;&#x8272;&#x7684;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerA.backgroundColor = <span class="hljs-string">&quot;red&quot;</span>
+layerA.backgroundColor = <span class="hljs-string">&quot;#00ff00&quot;</span>
+layerA.backgroundColor = <span class="hljs-string">&quot;rgba(134,12,64,0.4)&quot;</span>
+layerA.backgroundColor = <span class="hljs-string">&quot;transparent&quot;</span>
+
+<span class="hljs-comment"># Remove the backgroundColor</span>
+layerA.backgroundColor = <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
 
                     
                     </section>
