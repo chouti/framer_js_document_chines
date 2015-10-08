@@ -4,11 +4,11 @@
     <head>
         
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Layers | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.0.1">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -17,6 +17,19 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
         
     
     
@@ -29,37 +42,33 @@
     <body>
         
         
-    <link rel="stylesheet" href="../gitbook/style.css">
-    
-    
-
-        
-    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Oct 08 2015 13:27:59 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Oct 08 2015 15:09:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="../index.html">
+                
                         <i class="fa fa-check"></i>
                         
                         Introduction
                     </a>
-                
             
             
         </li>
@@ -68,13 +77,13 @@
             
                 
                     <a href="../print/print.html">
+                
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
                         
                         Print
                     </a>
-                
             
             
             <ul class="articles">
@@ -96,13 +105,13 @@
             
                 
                     <a href="../defaults/defaults.html">
+                
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
                         
                         Defaults
                     </a>
-                
             
             
             <ul class="articles">
@@ -124,13 +133,13 @@
             
                 
                     <a href="../canvas/canvas.html">
+                
                         <i class="fa fa-check"></i>
                         
                             <b>3.</b>
                         
                         Canvas
                     </a>
-                
             
             
             <ul class="articles">
@@ -166,13 +175,13 @@
             
                 
                     <a href="../screen/screen.html">
+                
                         <i class="fa fa-check"></i>
                         
                             <b>4.</b>
                         
                         Screen
                     </a>
-                
             
             
             <ul class="articles">
@@ -208,13 +217,13 @@
             
                 
                     <a href="../layers/layers.html">
+                
                         <i class="fa fa-check"></i>
                         
                             <b>5.</b>
                         
                         Layers
                     </a>
-                
             
             
             <ul class="articles">
@@ -1018,20 +1027,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -1105,6 +1115,8 @@
     <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
     
     
+    
+
 
     <!-- Title -->
     <h1>
@@ -1113,30 +1125,13 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="layers">Layers</h1>
-<!-- toc -->
-<ul>
-<li><a href="#layerid-number">layer.id <code>&lt;number&gt;</code></a></li>
-<li><a href="#layername-string">layer.name <code>&lt;string&gt;</code></a></li>
-<li><a href="#layerx-number">layer.x <code>&lt;number&gt;</code></a></li>
-<li><a href="#layery-number">layer.y <code>&lt;number&gt;</code></a></li>
-<li><a href="#layerz-number">layer.z <code>&lt;number&gt;</code></a></li>
-<li><a href="#layerwidth-number">layer.width <code>&lt;number&gt;</code></a></li>
-<li><a href="#layerheight-number">layer.height <code>&lt;number&gt;</code></a></li>
-<li><a href="#layerminx-number">layer.minX <code>&lt;number&gt;</code></a></li>
-<li><a href="#layermidx-number">layer.midX <code>&lt;number&gt;</code></a></li>
-<li><a href="#layermaxx-number">layer.maxX <code>&lt;number&gt;</code></a></li>
-<li><a href="#layerminy-number">layer.minY <code>&lt;number&gt;</code></a></li>
-<li><a href="#layermidy-number">layer.midY <code>&lt;number&gt;</code></a></li>
-<li><a href="#layermaxy-number">layer.maxY <code>&lt;number&gt;</code></a></li>
-</ul>
-<!-- toc stop -->
+                        <h1 id="layers"><a name="layers" class="plugin-anchor" href="#layers"><span class="fa fa-link"></span></a>Layers</h1>
 <p>&#x56FE;&#x5C42;&#x662F; Framer &#x7684;&#x57FA;&#x672C;&#x5BB9;&#x5668;&#x3002;&#x56FE;&#x5C42;&#x6709;&#x4F4D;&#x7F6E;&#x3001;&#x5927;&#x5C0F;&#x3001;&#x89C6;&#x89C9;&#x5C5E;&#x6027;&#x548C;&#x7B49;&#x7EA7;&#x3002;&#x56FE;&#x5C42;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x56FE;&#x7247;&#x3001;&#x89C6;&#x9891;&#x3001;&#x6587;&#x5B57;&#x6216;&#x8005;&#x4EFB;&#x610F;&#x7684; html&#x3002;</p>
 <p>&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>new</code> &#x8FD9;&#x4E2A;&#x5173;&#x952E;&#x8BCD;&#x6765;&#x521B;&#x5EFA;&#x56FE;&#x5C42;&#x3002;&#x56FE;&#x5C42;&#x62E5;&#x6709;&#x4E00;&#x7EC4;&#x9ED8;&#x8BA4;&#x5C5E;&#x6027;&#x6BD4;&#x5982;&#x84DD;&#x8272;&#x4EE5;&#x53CA;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>Framer.Defaults</code> &#x4E2D;&#x6539;&#x5199;&#x4ED6;&#x4EEC;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
@@ -1153,13 +1148,13 @@
 layerA.y = <span class="hljs-number">900</span>
 layerA.opacity = <span class="hljs-number">1</span>
 </code></pre>
-<h2 id="layer-id-number">layer.id <code>&lt;number&gt;</code></h2>
+<h2 id="layer-id-number"><a name="layer-id-number" class="plugin-anchor" href="#layer-id-number"><span class="fa fa-link"></span></a>layer.id <code>&lt;number&gt;</code></h2>
 <p>&#x6B64;&#x56FE;&#x5C42;&#x7684;&#x552F;&#x4E00;&#x7F16;&#x53F7;&#xFF0C;&#x5176;&#x4ED6;&#x56FE;&#x5C42;&#x7684;&#x7F16;&#x53F7;&#x5FC5;&#x5B9A;&#x4E0E;&#x8FD9;&#x4E2A;&#x4E0D;&#x540C;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x53EA;&#x8BFB;&#x4E14;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x7684;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 <span class="hljs-built_in">print</span> layerA.id
 <span class="hljs-comment"># Output: 1</span>
 </code></pre>
-<h2 id="layer-name-string">layer.name <code>&lt;string&gt;</code></h2>
+<h2 id="layer-name-string"><a name="layer-name-string" class="plugin-anchor" href="#layer-name-string"><span class="fa fa-link"></span></a>layer.name <code>&lt;string&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x5C31;&#x6709;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x3002;&#x4ECE; Sketch &#x548C; Photoshop &#x5BFC;&#x5165;&#x7684;&#x56FE;&#x5C42;&#x4F1A;&#x4ECE;&#x6765;&#x6E90;&#x56FE;&#x5C42;&#x4E2D;&#x83B7;&#x5F97;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.name = <span class="hljs-string">&quot;Button&quot;</span>
@@ -1167,33 +1162,33 @@ layerA.name = <span class="hljs-string">&quot;Button&quot;</span>
 <span class="hljs-built_in">print</span> layerA.name
 <span class="hljs-comment"># Output: &quot;Button&quot;</span>
 </code></pre>
-<h2 id="layer-x-number">layer.x <code>&lt;number&gt;</code></h2>
+<h2 id="layer-x-number"><a name="layer-x-number" class="plugin-anchor" href="#layer-x-number"><span class="fa fa-link"></span></a>layer.x <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684; x &#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x5DE6;&#x4E0A;&#x89D2;&#x7684; x &#x4F4D;&#x7F6E;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.x = <span class="hljs-number">500</span>
 </code></pre>
-<h2 id="layer-y-number">layer.y <code>&lt;number&gt;</code></h2>
+<h2 id="layer-y-number"><a name="layer-y-number" class="plugin-anchor" href="#layer-y-number"><span class="fa fa-link"></span></a>layer.y <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684; y &#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x5DE6;&#x4E0A;&#x89D2;&#x7684; y &#x4F4D;&#x7F6E;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.y = <span class="hljs-number">500</span>
 </code></pre>
-<h2 id="layer-z-number">layer.z <code>&lt;number&gt;</code></h2>
+<h2 id="layer-z-number"><a name="layer-z-number" class="plugin-anchor" href="#layer-z-number"><span class="fa fa-link"></span></a>layer.z <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684; z &#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x5B83;&#x5728;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5E38;&#x8BF4;&#x7684;&#x6DF1;&#x5EA6;&#x3002;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x5BF9;&#x8C61;&#x8D8A;&#x8FDC;&#x79BB;&#x89C6;&#x56FE;&#x7684;&#x70B9;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x770B;&#x5230;&#x6DF1;&#x5EA6;&#x6548;&#x679C;&#x8BB0;&#x4F4F;&#x4F60;&#x9700;&#x8981;&#x5141;&#x8BB8;&#x7236;&#x56FE;&#x5C42;&#x7684;&#x900F;&#x89C6;&#x611F;&#x3002;&#x4E5F;&#x8981;&#x6CE8;&#x610F; z &#x5C5E;&#x6027;&#x4E0D;&#x540C;&#x4E8E; <code>layer.index</code> &#xFF08; z &#x8F74;&#x987A;&#x5E8F; &#xFF09;&#xFF0C;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684; z &#x503C;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.z = <span class="hljs-number">500</span>
 </code></pre>
-<h2 id="layer-width-number">layer.width <code>&lt;number&gt;</code></h2>
+<h2 id="layer-width-number"><a name="layer-width-number" class="plugin-anchor" href="#layer-width-number"><span class="fa fa-link"></span></a>layer.width <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684;&#x50CF;&#x7D20;&#x5BBD;&#x5EA6;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.width = <span class="hljs-number">500</span>
 </code></pre>
-<h2 id="layer-height-number">layer.height <code>&lt;number&gt;</code></h2>
+<h2 id="layer-height-number"><a name="layer-height-number" class="plugin-anchor" href="#layer-height-number"><span class="fa fa-link"></span></a>layer.height <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684;&#x50CF;&#x7D20;&#x9AD8;&#x5EA6;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.height = <span class="hljs-number">500</span>
 </code></pre>
-<h2 id="layer-minx-number">layer.minX <code>&lt;number&gt;</code></h2>
+<h2 id="layer-minx-number"><a name="layer-minx-number" class="plugin-anchor" href="#layer-minx-number"><span class="fa fa-link"></span></a>layer.minX <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x5DE6;&#x8FB9;&#x7F18;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B49;&#x540C;&#x4E8E; <code>layer.x</code></p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1204,7 +1199,7 @@ layerA.height = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.minX
 <span class="hljs-comment"># Output: 100</span>
 </code></pre>
-<h2 id="layer-midx-number">layer.midX <code>&lt;number&gt;</code></h2>
+<h2 id="layer-midx-number"><a name="layer-midx-number" class="plugin-anchor" href="#layer-midx-number"><span class="fa fa-link"></span></a>layer.midX <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684;&#x6C34;&#x5E73;&#x4E2D;&#x592E;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1219,7 +1214,7 @@ layerA.midX = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.x
 <span class="hljs-comment"># Output: 450</span>
 </code></pre>
-<h2 id="layer-maxx-number">layer.maxX <code>&lt;number&gt;</code></h2>
+<h2 id="layer-maxx-number"><a name="layer-maxx-number" class="plugin-anchor" href="#layer-maxx-number"><span class="fa fa-link"></span></a>layer.maxX <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x53F3;&#x8FB9;&#x7F18;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1234,7 +1229,7 @@ layerA.maxX = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.x
 <span class="hljs-comment"># Output: 400</span>
 </code></pre>
-<h2 id="layer-miny-number">layer.minY <code>&lt;number&gt;</code></h2>
+<h2 id="layer-miny-number"><a name="layer-miny-number" class="plugin-anchor" href="#layer-miny-number"><span class="fa fa-link"></span></a>layer.minY <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x4E0A;&#x8FB9;&#x7F18;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B49;&#x540C;&#x4E8E; <code>layer.y</code></p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1245,7 +1240,7 @@ layerA.maxX = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.minY
 <span class="hljs-comment"># Output: 100</span>
 </code></pre>
-<h2 id="layer-midy-number">layer.midY <code>&lt;number&gt;</code></h2>
+<h2 id="layer-midy-number"><a name="layer-midy-number" class="plugin-anchor" href="#layer-midy-number"><span class="fa fa-link"></span></a>layer.midY <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x7684;&#x5782;&#x76F4;&#x4E2D;&#x5FC3;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1260,7 +1255,7 @@ layerA.midY = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.y
 <span class="hljs-comment"># Output: 450</span>
 </code></pre>
-<h2 id="layer-maxy-number">layer.maxY <code>&lt;number&gt;</code></h2>
+<h2 id="layer-maxy-number"><a name="layer-maxy-number" class="plugin-anchor" href="#layer-maxy-number"><span class="fa fa-link"></span></a>layer.maxY <code>&lt;number&gt;</code></h2>
 <p>&#x56FE;&#x5C42;&#x5E95;&#x8FB9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
     <span class="hljs-attribute">x</span>: <span class="hljs-number">100</span>
@@ -1274,6 +1269,61 @@ layerA.midY = <span class="hljs-number">500</span>
 layerA.maxY = <span class="hljs-number">500</span>
 <span class="hljs-built_in">print</span> layerA.y
 <span class="hljs-comment"># Output: 400</span>
+</code></pre>
+<h2 id="layer-point-object"><a name="layer-point-object" class="plugin-anchor" href="#layer-point-object"><span class="fa fa-link"></span></a>layer.point <code>&lt;object&gt;</code></h2>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x6216;&#x8005;&#x6355;&#x6349;&#x56FE;&#x5C42;&#x7684; x &#x548C; y &#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-built_in">print</span> layerA.point
+<span class="hljs-comment"># Output: { x: 100, y: 100 }</span>
+
+layerA.point =
+  <span class="hljs-attribute">x</span>: <span class="hljs-number">10</span>
+  <span class="hljs-attribute">y</span>: <span class="hljs-number">200</span>
+
+<span class="hljs-built_in">print</span> layerA.point
+<span class="hljs-comment"># Output: { x: 10, y: 200 }</span>
+
+<span class="hljs-built_in">print</span> layerA.x
+<span class="hljs-comment"># Output: 10</span>
+</code></pre>
+<h2 id="layer-size-object"><a name="layer-size-object" class="plugin-anchor" href="#layer-size-object"><span class="fa fa-link"></span></a>layer.size <code>&lt;object&gt;</code></h2>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x6216;&#x8005;&#x6355;&#x6349;&#x56FE;&#x5C42;&#x7684;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>
+
+<span class="hljs-built_in">print</span> layerA.size
+<span class="hljs-comment"># Output: { width: 100, height: 100}</span>
+
+layerA.size =
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">10</span>
+
+<span class="hljs-built_in">print</span> layerA.size
+<span class="hljs-comment"># Output: { width: 10, height: 10 }</span>
+
+<span class="hljs-built_in">print</span> layerA.width
+<span class="hljs-comment"># Output: 10</span>
+</code></pre>
+<h2 id="layer-frame-object"><a name="layer-frame-object" class="plugin-anchor" href="#layer-frame-object"><span class="fa fa-link"></span></a>layer.frame <code>&lt;object&gt;</code></h2>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x6216;&#x8005;&#x6355;&#x6349;&#x56FE;&#x5C42;&#x7684; x&#x3001;y&#x3001;&#x5BBD;&#x548C;&#x9AD8;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-built_in">print</span> layerA.frame
+<span class="hljs-comment"># Output: { x: 100, y: 100, width: 100, height: 100 }</span>
+
+layerA.frame =
+  <span class="hljs-attribute">x</span>: <span class="hljs-number">10</span>
+  <span class="hljs-attribute">y</span>: <span class="hljs-number">200</span>
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">10</span>
+
+<span class="hljs-built_in">print</span> layerA.frame
+<span class="hljs-comment"># Output: { x: 10, y: 200, width: 10, height: 10 }</span>
+
+<span class="hljs-built_in">print</span> layerA.x
+<span class="hljs-comment"># Output: 10</span>
 </code></pre>
 
                     
