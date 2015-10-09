@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Oct 08 2015 19:56:57 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 09 2015 10:40:09 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1460,6 +1460,78 @@ layerA.backgroundColor = <span class="hljs-string">&quot;transparent&quot;</span
 
 <span class="hljs-comment"># Remove the backgroundColor</span>
 layerA.backgroundColor = <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<h2 id="layer-image-string"><a name="layer-image-string" class="plugin-anchor" href="#layer-image-string"><span class="fa fa-link"></span></a>layer.image <code>&lt;string&gt;</code></h2>
+<p>&#x8BBE;&#x5B9A;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x50CF; url &#x6216;&#x8005;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; url&#x3002;&#x5982;&#x679C;&#x56FE;&#x50CF;&#x662F;&#x5728;&#x7EBF;&#x5B58;&#x50A8;&#x7684;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#x6765;&#x8F7D;&#x5165;&#x3002;&#x56FE;&#x50CF;&#x4F1A;&#x59CB;&#x7EC8;&#x9002;&#x5408;&#x56FE;&#x5C42;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x62C9;&#x4F38;&#xFF0C;&#x7ED9;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#x8BBE;&#x7F6E;&#x4E86;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x4F1A;&#x79FB;&#x9664;&#x80CC;&#x666F;&#x8272;&#x5C5E;&#x6027;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x56FE;&#x50CF;&#x4E3A; <code>null</code> &#x6216;&#x8005;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x56FE;&#x50CF;&#x3002;&#x672C;&#x5730;&#x56FE;&#x7247;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x5F53;&#x56FE;&#x7247;&#x8F7D;&#x5165;&#x5B8C;&#x6210;&#x4E14;&#x51C6;&#x5907;&#x597D;&#x4E0E;<code>Events.ImageLoaded</code>&#x4E8B;&#x4EF6;&#x4E00;&#x8D77;&#x5C55;&#x793A;&#x3002;&#x5982;&#x679C;&#x8F7D;&#x5165;&#x56FE;&#x7247;&#x51FA;&#x9519;&#x4F1A;&#x629B;&#x51FA;<code>Events.ImageLoadError</code>&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerA.image = <span class="hljs-string">&quot;images/logo.png&quot;</span>
+layerA.image = <span class="hljs-string">&quot;http://framerjs.com/logo.png&quot;</span>
+
+<span class="hljs-comment"># Listen to the loading event</span>
+layerA.<span class="hljs-literal">on</span> Events.ImageLoaded, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-built_in">print</span> <span class="hljs-string">&quot;the image is loaded&quot;</span>
+
+layerA.<span class="hljs-literal">on</span> Events.ImageLoadError, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-built_in">print</span> <span class="hljs-string">&quot;the image could not be loaded&quot;</span>
+
+layerA.image = <span class="hljs-string">&quot;images/other-logo.png&quot;</span>
+</code></pre>
+<h2 id="layer-visible-boolean"><a name="layer-visible-boolean" class="plugin-anchor" href="#layer-visible-boolean"><span class="fa fa-link"></span></a>layer.visible <code>&lt;boolean&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x53EF;&#x89C1;&#x6027;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.visible = <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="layer-opacity-number"><a name="layer-opacity-number" class="plugin-anchor" href="#layer-opacity-number"><span class="fa fa-link"></span></a>layer.opacity <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x900F;&#x660E;&#x5EA6;&#x3002;&#x900F;&#x660E;&#x5EA6;&#x7531;&#x4E00;&#x4E2A;0&#x5230;1&#x7684;&#x6570;&#x5B9A;&#x4E49;&#xFF0C;0&#x662F;&#x5168;&#x900F;&#x660E;&#xFF0C;1&#x662F;&#x4E0D;&#x900F;&#x660E;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.opacity = <span class="hljs-number">0.5</span>
+</code></pre>
+<h2 id="layer-clip-boolean"><a name="layer-clip-boolean" class="plugin-anchor" href="#layer-clip-boolean"><span class="fa fa-link"></span></a>layer.clip <code>&lt;boolean&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x88C1;&#x526A;&#x5B83;&#x7684;&#x5B50;&#x56FE;&#x5C42;&#x3002;&#x88C1;&#x526A;&#x662F;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x7684;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x5706;&#x89D2;&#x77E9;&#x5F62;&#x7684;&#x526A;&#x88C1;&#x53EF;&#x80FD;&#x6709;&#x7F3A;&#x9677;&#xFF0C;&#x56E0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x6765;&#x6E32;&#x67D3;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x6240;&#x6709;&#x9700;&#x8981;&#x88AB;&#x88C1;&#x526A;&#x7684;&#x5B50;&#x56FE;&#x5C42;&#x542F;&#x7528;<code>layer.force2d</code>&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span>
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+layerA.clip = <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="layer-ignoreevents-boolean"><a name="layer-ignoreevents-boolean" class="plugin-anchor" href="#layer-ignoreevents-boolean"><span class="fa fa-link"></span></a>layer.ignoreEvents <code>&lt;boolean&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x662F;&#x5426;&#x54CD;&#x5E94;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x70B9;&#x51FB;&#x6216;&#x8005;&#x89E6;&#x6478;&#x3002;&#x5F53;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E0D;&#x54CD;&#x5E94;&#x65F6;&#xFF0C;&#x57FA;&#x4E8E;&#x6B64;&#x56FE;&#x5C42;&#x7684;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#x5C06;&#x4E0D;&#x4EA7;&#x751F;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x6253;&#x5F00;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;&#x56FE;&#x5C42;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x53BB;&#x5173;&#x6CE8;&#x4E8B;&#x4EF6;&#x65F6;&#x6027;&#x80FD;&#x4F1A;&#x597D;&#x4E00;&#x4E9B;&#x3002;&#x5F53;&#x4F60;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x65F6; Framer &#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5176;&#x7981;&#x6B62;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerA.<span class="hljs-literal">on</span> Events.click, <span class="hljs-function">-&gt;</span>
+  <span class="hljs-built_in">print</span> <span class="hljs-string">&quot;Click!&quot;</span>
+
+<span class="hljs-comment"># Now it won&apos;t respond to a click</span>
+layerA.ignoreEvents = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># Now it will</span>
+layerA.ignoreEvents = <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="layer-force2d-boolean"><a name="layer-force2d-boolean" class="plugin-anchor" href="#layer-force2d-boolean"><span class="fa fa-link"></span></a>layer.force2d <code>&lt;boolean&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x662F;&#x4E0D;&#x662F;&#x53EA;&#x6E32;&#x67D3; 2D &#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4F1A;&#x7ED5;&#x8FC7; GPU &#x7684;&#x52A0;&#x901F;&#x6E32;&#x67D3;&#x6240;&#x4EE5;&#x5BF9;&#x52A8;&#x753B;&#x6765;&#x8BF4;&#x4F1A;&#x6162;&#x4E00;&#x4E9B;&#x3002;&#x5F53;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x88AB;&#x542F;&#x7528;&#x540E;&#x4F60;&#x5C06;&#x65E0;&#x6CD5;&#x5728; 3D &#x7A7A;&#x95F4;&#x5185;&#x65CB;&#x8F6C;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x9AD8;&#x7EA7;&#x906E;&#x7F69;&#x529F;&#x80FD;&#x8D77;&#x6548;&#xFF0C;&#x6BD4;&#x5982;&#x90A3;&#x4E9B;&#x5706;&#x89D2;&#x7684;&#x906E;&#x7F69;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">400</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">400</span>
+  <span class="hljs-attribute">backgroundColor</span>: <span class="hljs-string">&quot;red&quot;</span>
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">300</span>
+  <span class="hljs-attribute">backgroundColor</span>: <span class="hljs-string">&quot;blue&quot;</span>
+
+layerB.borderRadius = layerB.width / <span class="hljs-number">2</span>
+
+layerA.force2d = <span class="hljs-literal">true</span>
+layerA.superLayer = layerB
 </code></pre>
 
                     
