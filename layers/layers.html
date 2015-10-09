@@ -42,7 +42,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 09 2015 11:26:51 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 09 2015 19:08:36 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1532,6 +1532,53 @@ layerB.borderRadius = layerB.width / <span class="hljs-number">2</span>
 
 layerA.force2d = <span class="hljs-literal">true</span>
 layerA.superLayer = layerB
+</code></pre>
+<h2 id="layer-originx-number"><a name="layer-originx-number" class="plugin-anchor" href="#layer-originx-number"><span class="fa fa-link"></span></a>layer.originX <code>&lt;number&gt;</code></h2>
+<p>&#x4E3A;&#x4E86;&#x653E;&#x5927;&#x3001;&#x65CB;&#x8F6C;&#x6216;&#x8005;&#x503E;&#x659C;&#x53D8;&#x5F62;&#x800C;&#x8BBE;&#x7F6E;&#x7684;&#x6C34;&#x5E73;&#x539F;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E;&#x5B8C;&#x8FD9;&#x4E2A;&#x70B9;&#x4E4B;&#x540E;&#x56FE;&#x5C42;&#x7ED5;&#x7740;&#x8FD9;&#x4E2A;&#x70B9;&#x65CB;&#x8F6C;&#x3002;&#x539F;&#x70B9;&#x7528;&#x4ECB;&#x4E8E; 0 &#x548C; 1 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x6765;&#x5B9A;&#x4E49;&#xFF0C;0 &#x4EE3;&#x8868;&#x662F;&#x6700;&#x5DE6;&#x4FA7;&#x7684;&#x8FB9;&#xFF0C;1 &#x81EA;&#x7136;&#x5C31;&#x662F;&#x6700;&#x53F3;&#x4FA7;&#x7684;&#x8FB9;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 0.5 &#x4E5F;&#x5C31;&#x662F;&#x4E2D;&#x95F4;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotation = <span class="hljs-number">45</span>
+layerA.originX = <span class="hljs-number">0</span>
+layerA.originX = <span class="hljs-number">1</span>
+</code></pre>
+<h2 id="layer-originy-number"><a name="layer-originy-number" class="plugin-anchor" href="#layer-originy-number"><span class="fa fa-link"></span></a>layer.originY <code>&lt;number&gt;</code></h2>
+<p>&#x4E3A;&#x4E86;&#x653E;&#x5927;&#x3001;&#x65CB;&#x8F6C;&#x6216;&#x8005;&#x503E;&#x659C;&#x53D8;&#x5F62;&#x800C;&#x8BBE;&#x7F6E;&#x7684;&#x5782;&#x76F4;&#x539F;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E;&#x5B8C;&#x8FD9;&#x4E2A;&#x70B9;&#x4E4B;&#x540E;&#x56FE;&#x5C42;&#x7ED5;&#x7740;&#x8FD9;&#x4E2A;&#x70B9;&#x65CB;&#x8F6C;&#x3002;&#x539F;&#x70B9;&#x7528;&#x4ECB;&#x4E8E; 0 &#x548C; 1 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x6765;&#x5B9A;&#x4E49;&#xFF0C;0 &#x4EE3;&#x8868;&#x662F;&#x6700;&#x9876;&#x90E8;&#x7684;&#x8FB9;&#xFF0C;1 &#x81EA;&#x7136;&#x5C31;&#x662F;&#x6700;&#x5E95;&#x90E8;&#x7684;&#x8FB9;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 0.5 &#x4E5F;&#x5C31;&#x662F;&#x4E2D;&#x95F4;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotation = <span class="hljs-number">45</span>
+layerA.originY = <span class="hljs-number">0</span>
+layerA.originY = <span class="hljs-number">1</span>
+</code></pre>
+<h2 id="layer-perspective-number"><a name="layer-perspective-number" class="plugin-anchor" href="#layer-perspective-number"><span class="fa fa-link"></span></a>layer.perspective <code>&lt;number&gt;</code></h2>
+<p>&#x4E3A;&#x5B50;&#x56FE;&#x5C42;&#x8BBE;&#x7F6E;&#x900F;&#x89C6;&#x3002;&#x900F;&#x89C6;&#x7ED9; 3D &#x5C5E;&#x6027;&#x4EE5;&#x6DF1;&#x5EA6;&#xFF0C;&#x6BD4;&#x5982; <code>rotationX</code> &#x548C; <code>rotationY</code>&#x3002;&#x65CB;&#x8F6C;&#x7684;&#x503C;&#x4ECE; 1 &#x5230;&#x65E0;&#x7A77;&#xFF0C;1 &#x4EE3;&#x8868;&#x4E86;&#x65E0;&#x9650;&#x5927;&#x7684;&#x900F;&#x89C6;&#x3002;&#x8BBE;&#x7F6E;&#x900F;&#x89C6;&#x4E3A; 0 &#x4F60;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7ACB;&#x65B9;&#x4F53;&#x7684;&#x6548;&#x679C;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x900F;&#x89C6;&#x662F;&#x5173;&#x95ED;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x4E3A; Safari &#x7684;&#x6E32;&#x67D3;&#x539F;&#x56E0;&#xFF0C;&#x900F;&#x89C6;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x89C6;&#x7F51;&#x819C;&#x753B;&#x8D28;&#x7684;&#x6E32;&#x67D3;&#x3002;&#x6211;&#x60F3;&#x8FD9;&#x662F;&#x4EE5;&#x540E;&#x4F1A;&#x89E3;&#x51B3;&#x7684;&#x4E00;&#x4E2A;&#x7F3A;&#x9677;&#x3002;&#x867D;&#x7136;&#x5728;&#x4F7F;&#x7528;&#x65CB;&#x8F6C;&#x6216;&#x8005;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x592A;&#x611F;&#x89C9;&#x5F97;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Set the perspective for all sub layers.</span>
+layerA.perspective = <span class="hljs-number">100</span>
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+  <span class="hljs-attribute">rotationX</span>: <span class="hljs-number">30</span>
+  <span class="hljs-attribute">rotationY</span>: <span class="hljs-number">30</span>
+</code></pre>
+<h2 id="layer-rotation-number"><a name="layer-rotation-number" class="plugin-anchor" href="#layer-rotation-number"><span class="fa fa-link"></span></a>layer.rotation <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x65CB;&#x8F6C;&#x7684;&#x7A0B;&#x5EA6;&#x3002;&#x65CB;&#x8F6C;&#x662F;&#x7528;&#x4ECB;&#x4E8E; 0 &#x5230; 360 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#x6765;&#x5B9A;&#x4E49;&#x89D2;&#x5EA6;&#x7684;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotation = <span class="hljs-number">45</span>
+</code></pre>
+<h2 id="layer-rotationx-number"><a name="layer-rotationx-number" class="plugin-anchor" href="#layer-rotationx-number"><span class="fa fa-link"></span></a>layer.rotationX <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x5728; x &#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x505A;&#x4E86;&#x591A;&#x5C11;&#x53D8;&#x5F62;&#x3002;&#x65CB;&#x8F6C;&#x7528;&#x4ECB;&#x4E8E; 0 &#x5230; 360 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#x6765;&#x5B9A;&#x4E49;&#x89D2;&#x5EA6;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotationX = <span class="hljs-number">45</span>
+</code></pre>
+<h2 id="layer-rotationy-number"><a name="layer-rotationy-number" class="plugin-anchor" href="#layer-rotationy-number"><span class="fa fa-link"></span></a>layer.rotationY <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x5728; y &#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x505A;&#x4E86;&#x591A;&#x5C11;&#x53D8;&#x5F62;&#x3002;&#x65CB;&#x8F6C;&#x7528;&#x4ECB;&#x4E8E; 0 &#x5230; 360 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#x6765;&#x5B9A;&#x4E49;&#x89D2;&#x5EA6;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotationY = <span class="hljs-number">45</span>
+</code></pre>
+<h2 id="layer-rotationz-number"><a name="layer-rotationz-number" class="plugin-anchor" href="#layer-rotationz-number"><span class="fa fa-link"></span></a>layer.rotationZ <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x5728; z &#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x505A;&#x4E86;&#x591A;&#x5C11;&#x53D8;&#x5F62;&#x3002;&#x65CB;&#x8F6C;&#x7528;&#x4ECB;&#x4E8E; 0 &#x5230; 360 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#x6765;&#x5B9A;&#x4E49;&#x89D2;&#x5EA6;&#x3002;z &#x8F74;&#x7684;&#x65CB;&#x8F6C;&#x548C; <code>layer.rotation</code> &#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.rotationZ = <span class="hljs-number">45</span>
 </code></pre>
 
                     
