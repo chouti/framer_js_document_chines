@@ -38,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Sun Oct 11 2015 13:20:37 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Sun Oct 11 2015 14:49:46 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -855,6 +855,23 @@ layerA.html = <span class="hljs-string">&quot;&lt;div&gt;&lt;canvas id=&apos;can
 canvasElement = layerA.querySelectorAll(<span class="hljs-string">&apos;#canvas&apos;</span>)
 </code></pre>
 <h2 id="layer-style-object">layer.style<code>&lt;object&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x6216;&#x8005;&#x53D6;&#x5F97;&#x56FE;&#x5C42;&#x7684; css &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x5927;&#x591A;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x5C5E;&#x6027;&#x90FD;&#x7531; Framer &#x5185;&#x90E8;&#x7BA1;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x4F60;&#x4F7F;&#x7528;&#x65F6;&#x9996;&#x9009;&#x662F;&#x7528;&#x8FD9;&#x4E9B;&#x5F62;&#x5F0F;&#x5C5E;&#x6027;&#xFF08;&#x6BD4;&#x5982; <code>layer.backgroundColor</code> &#x5BF9;&#x6BD4;  <code>layer.style[&quot;background-Color&quot;]</code>&#xFF09;&#x3002;&#x8FD9;&#x4E48;&#x505A;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4ECE; dom &#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x503C;&#x4F1A;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x52A8;&#x753B;&#x5FEB;&#x4E00;&#x70B9;&#x6211;&#x4EEC;&#x5B58;&#x4E86;&#x4E00;&#x4EFD;&#x7F13;&#x5B58;&#x3002;</p>
+<p>&#x9664;&#x4E86; css &#x6807;&#x51C6;&#x7684;&#x5C5E;&#x6027;&#x547D;&#x540D;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x9A7C;&#x5CF0;&#x5F0F;&#x547D;&#x540D;&#x6CD5;&#x3002;&#x6240;&#x4EE5;<code>layer.style[&quot;border-color&quot;]</code>&#x548C;<code>layer.style.borderColor</code>&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5B8C;&#x6574;&#x7684;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x770B;&#x8FD9;&#x4E00;&#x4EFD;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">&#x6587;&#x6863;</a></p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Modify a single style property.</span>
+layerA.style[<span class="hljs-string">&quot;outline&quot;</span>] = <span class="hljs-string">&quot;1px solid red&quot;</span>
+
+<span class="hljs-comment"># Modify set of style properties.</span>
+layerA.style =
+  <span class="hljs-string">&quot;outline&quot;</span>: <span class="hljs-string">&quot;1px solid red&quot;</span>,
+  <span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-string">&quot;10px&quot;</span>
+
+<span class="hljs-comment"># Get a specific style property.</span>
+<span class="hljs-built_in">print</span> layerA.style[<span class="hljs-string">&quot;outline&quot;</span>]
+<span class="hljs-comment"># Output: &quot;1px solid red&quot;</span>
+</code></pre>
 
                     
                     </section>
