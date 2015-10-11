@@ -38,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Oct 09 2015 22:18:06 GMT+0800 (CST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Sun Oct 11 2015 13:20:37 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -699,6 +699,162 @@ layerA.rotationY = <span class="hljs-number">45</span>
 <pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
 layerA.rotationZ = <span class="hljs-number">45</span>
 </code></pre>
+<h2 id="layer-scale-number">layer.scale <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x7684;&#x6BD4;&#x4F8B;&#x53D8;&#x5316;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x6BD4;&#x4F8B;&#x662F; 1&#x3002;&#x4EFB;&#x4F55;&#x6BD4; 1 &#x5C0F;&#x7684;&#x6570;&#x5B57;&#x90FD;&#x4F1A;&#x4F7F;&#x5F97;&#x56FE;&#x5C42;&#x7F29;&#x5C0F;&#xFF0C;&#x53CD;&#x4E4B;&#x5219;&#x653E;&#x5927;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.scale = <span class="hljs-number">2</span>
+layerA.scale = <span class="hljs-number">0.5</span>
+</code></pre>
+<h2 id="layer-scalex-number">layer.scaleX <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x5728;&#x6A2A;&#x5411;&#x7684;&#x6BD4;&#x4F8B;&#x53D8;&#x5316;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x6BD4;&#x4F8B;&#x662F; 1&#x3002;&#x4EFB;&#x4F55;&#x6BD4; 1 &#x5C0F;&#x7684;&#x6570;&#x5B57;&#x90FD;&#x4F1A;&#x4F7F;&#x5F97;&#x56FE;&#x5C42;&#x53D8;&#x5C0F;&#xFF0C;&#x800C;&#x53CD;&#x4E4B;&#x5219;&#x653E;&#x5927;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.scaleX = <span class="hljs-number">2</span>
+layerA.scaleX = <span class="hljs-number">0.5</span>
+</code></pre>
+<h2 id="layer-scaley-number">layer.scaleY <code>&lt;number&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x5F62;&#x6001;&#x5728;&#x7EB5;&#x5411;&#x7684;&#x6BD4;&#x4F8B;&#x53D8;&#x5316;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x6BD4;&#x4F8B;&#x662F; 1&#x3002;&#x4EFB;&#x4F55;&#x6BD4; 1 &#x5C0F;&#x7684;&#x6570;&#x5B57;&#x90FD;&#x4F1A;&#x4F7F;&#x5F97;&#x56FE;&#x5C42;&#x53D8;&#x5C0F;&#xFF0C;&#x800C;&#x53CD;&#x4E4B;&#x5219;&#x653E;&#x5927;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerA.scaleY = <span class="hljs-number">2</span>
+layerA.scaleY = <span class="hljs-number">0.5</span>
+</code></pre>
+<h2 id="layer-superlayer-layer-object">layer.superLayer <code>&lt;Layer Object&gt;</code></h2>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x7236;&#x56FE;&#x5C42;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8BA9;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x5728;&#x4F60;&#x6574;&#x4E2A;&#x6587;&#x6863;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF0C;&#x5C06;&#x5176;&#x7236;&#x56FE;&#x5C42;&#x8BBE;&#x7F6E;&#x4E3A; <code>null</code>&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+
+layerB.superLayer = layerA
+
+<span class="hljs-built_in">print</span> layerB.superLayer
+<span class="hljs-comment"># Output: &lt;Object: Layer layerA&gt;</span>
+</code></pre>
+<h2 id="layer-sublayers-array">layer.subLayers <code>&lt;array&gt;</code></h2>
+<p>&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x6240;&#x6709;&#x5B50;&#x56FE;&#x5C42;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+layerC = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+<span class="hljs-built_in">print</span> layerA.subLayers
+<span class="hljs-comment"># Output: [&lt;Object:Layer layerB&gt;,&lt;Object:Layer layerC&gt;]</span>
+</code></pre>
+<h2 id="layer-sublayersbyname-name-string">layer.subLayersByName(name <code>&lt;string&gt;</code>)</h2>
+<p><code>&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x4E86;&#x56FE;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x7EC4;</code>
+&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x6240;&#x6709;&#x5B50;&#x56FE;&#x5C42;&#x6309;&#x7167;&#x540D;&#x5B57;&#x8FC7;&#x6EE4;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">name</span>: <span class="hljs-string">&quot;navigation&quot;</span>
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+layerC = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">name</span>: <span class="hljs-string">&quot;button&quot;</span>
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+<span class="hljs-built_in">print</span> layerA.subLayersByName(<span class="hljs-string">&quot;button&quot;</span>)
+<span class="hljs-comment"># Output: [&lt;Object: Layer layerC&gt;]</span>
+</code></pre>
+<h2 id="layer-addsublayer-layer-layer-object">layer.addSubLayer(Layer <code>&lt;Layer object&gt;</code>)</h2>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#x6DFB;&#x52A0;&#x4E3A;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7684;&#x5B50;&#x56FE;&#x5C42;&#x3002;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x4F1A;&#x4FEE;&#x6539;&#x88AB;&#x6DFB;&#x52A0;&#x7684;&#x56FE;&#x5C42;&#x7684;<code>superLayer</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+
+layerA.addSubLayer(layerB)
+
+<span class="hljs-built_in">print</span> layerB.superLayer
+<span class="hljs-comment">#Output: &lt;Object:Layer layerA&gt;</span>
+</code></pre>
+<h2 id="layer-removesublayer-layer-layer-object">Layer.removeSubLayer(layer <code>&lt;Layer Object&gt;</code>)</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x4ECE;&#x5176;&#x7236;&#x56FE;&#x5C42;&#x5904;&#x79FB;&#x9664;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+layerA.removeSubLayer(layerB)
+
+<span class="hljs-built_in">print</span> layerB.superLayer
+<span class="hljs-comment"># Output: null</span>
+</code></pre>
+<h2 id="layer-siblinglayers">layer.siblingLayers()</h2>
+<p><code>&#x8FD4;&#x56DE;&#xFF1A;&#x5305;&#x542B;&#x4E86;&#x56FE;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x7EC4;</code>
+&#x4E0E;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x62E5;&#x6709;&#x540C;&#x4E00;&#x4E2A;&#x7236;&#x56FE;&#x5C42;&#x7684;&#x56FE;&#x5C42;&#x96C6;&#x5408;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x4E9B;&#x56FE;&#x5C42;&#x5728;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x4E2D;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x5C42;&#x7EA7;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+layerB = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+layerC = <span class="hljs-keyword">new</span> Layer
+  <span class="hljs-attribute">superLayer</span>: layerA
+
+<span class="hljs-built_in">print</span> layerB.siblingLayers()
+<span class="hljs-comment">#Output: [&lt;Object: Layer layerC&gt;]</span>
+</code></pre>
+<h2 id="layer-index-index">layer.index <code>&lt;index&gt;</code></h2>
+<p>&#x56FE;&#x5C42;&#x7684;&#x7D22;&#x5F15;&#x987A;&#x5E8F;&#x3002;&#x540C;&#x5C42;&#x7EA7;&#x7684;&#x56FE;&#x5C42;&#x4E2D;&#x867D;&#x7136; z &#x8F74;&#x5750;&#x6807;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x62E5;&#x6709;&#x9AD8;&#x7D22;&#x5F15;&#x7684;&#x56FE;&#x5C42;&#x4F1A;&#x753B;&#x5728;&#x4F4E;&#x7D22;&#x5F15;&#x7684;&#x56FE;&#x5C42;&#x4E0A;&#x65B9;&#xFF0C;&#x4F4E;&#x7D22;&#x5F15;&#x7684;&#x5728;&#x66F4;&#x4E0B;&#x65B9;&#x3002;</p>
+<p>&#x56FE;&#x5C42;&#x7D22;&#x5F15;&#x6309;&#x7167;&#x63D2;&#x5165;&#x7684;&#x987A;&#x5E8F;&#x9012;&#x589E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5C06;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#x4F5C;&#x4E3A;&#x5B50;&#x56FE;&#x5C42;&#x6DFB;&#x52A0;&#x7ED9;&#x4E00;&#x4E2A;&#x7236;&#x56FE;&#x5C42;&#x65F6;&#xFF0C;&#x82E5;&#x6700;&#x9AD8;&#x7D22;&#x5F15;&#x7684;&#x5B50;&#x56FE;&#x5C42;&#x4E3A; 5&#xFF0C;&#x5219;&#x65B0;&#x52A0;&#x5165;&#x7684;&#x5B50;&#x56FE;&#x5C42;&#x4F1A;&#x62E5;&#x6709;&#x7D22;&#x5F15;&#x4E3A; 6&#x3002;&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x540E;&#x63D2;&#x5165;&#x7684;&#x56FE;&#x5C42;&#x59CB;&#x7EC8;&#x5728;&#x6700;&#x4E0A;&#x65B9;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment">#Draw layerB on top</span>
+layerA.index = <span class="hljs-number">2</span>
+layerB.index = <span class="hljs-number">1</span>
+</code></pre>
+<h2 id="layer-placebefore-layer-layer-object">layer.placeBefore(layer <code>&lt;Layer object&gt;</code>)</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7F6E;&#x4E8E;&#x53E6;&#x4E00;&#x56FE;&#x5C42;&#x7684;&#x4E0A;&#x65B9;&#x3002;&#x8FD9;&#x5C06;&#x4F1A;&#x6539;&#x53D8;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#x7684;<code>layer.index</code>&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EA;&#x5BF9;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7236;&#x56FE;&#x5C42;&#x7684;&#x56FE;&#x5C42;&#x8D77;&#x6548;&#xFF0C;&#x6216;&#x8005;&#x7D22;&#x6027;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x7236;&#x56FE;&#x5C42;&#x4E5F;&#x53EF;&#x4EE5;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Draw layerB on top</span>
+layerB.placeBefore(layerA)
+</code></pre>
+<h2 id="layer-placebehind-layer-layer-object">layer.placeBehind(layer<code>&lt;Layer object&gt;</code>)</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x7F6E;&#x4E8E;&#x53E6;&#x4E00;&#x56FE;&#x5C42;&#x7684;&#x540E;&#x65B9;&#x3002;&#x8FD9;&#x5C06;&#x4F1A;&#x6539;&#x53D8;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#x7684;<code>layer.index</code>&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EA;&#x5BF9;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7236;&#x56FE;&#x5C42;&#x7684;&#x56FE;&#x5C42;&#x8D77;&#x6548;&#xFF0C;&#x6216;&#x8005;&#x7D22;&#x6027;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x7236;&#x56FE;&#x5C42;&#x4E5F;&#x53EF;&#x4EE5;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Draw layerB on top</span>
+layerA.placeBehind(layerB)
+</code></pre>
+<h2 id="layer-bringtofront">layer.bringToFront()</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x7684;&#x56FE;&#x5C42;&#x7F6E;&#x4E8E;&#x6240;&#x6709;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x7236;&#x56FE;&#x5C42;&#x4E0B;&#x5176;&#x4ED6;&#x56FE;&#x5C42;&#x4E4B;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+layerC = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Draw layerA on top</span>
+layerA.bringToFront()
+</code></pre>
+<h2 id="layer-sendtoback">layer.sendToBack()</h2>
+<p>&#x5C06;&#x5F53;&#x524D;&#x7684;&#x56FE;&#x5C42;&#x7F6E;&#x4E8E;&#x6240;&#x6709;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x7236;&#x56FE;&#x5C42;&#x4E0B;&#x5176;&#x4ED6;&#x56FE;&#x5C42;&#x4E4B;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+layerB = <span class="hljs-keyword">new</span> Layer
+layerC = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Draw layerC last</span>
+layerC.sendToBack()
+</code></pre>
+<h2 id="layer-html-html">layer.html<code>&lt;html&gt;</code></h2>
+<p>&#x5411;&#x5F53;&#x524D;&#x56FE;&#x5C42;&#x63D2;&#x5165;&#x4EFB;&#x610F;&#x7684; html&#x3002;&#x8FD9;&#x6BB5; html &#x53EF;&#x4EE5;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#xFF0C;&#x4ECE;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x5230;&#x8868;&#x5355;&#x5185;&#x5BB9;&#x6216;&#x8005;&#x753B;&#x5E03;&#x6216;&#x8005; svg &#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5B9A;&#x4F4D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x4E86;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x8BB0;&#x4F4F;&#xFF1A;&#x53EA;&#x6709;&#x5F53; Framer &#x6E32;&#x67D3;&#x7ED3;&#x675F;&#xFF08;&#x5C31;&#x597D;&#x50CF; jQuery &#x4E2D;&#x7684; document.ready&#xFF09;&#x4F60;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#x5B83;&#x3002;&#x5728;<code>layer.html</code>&#x4E2D;&#x53EF;&#x9760;&#x5730;&#x7D22;&#x5F15;&#x4E00;&#x4E2A; dom &#x5143;&#x7D20;&#xFF0C;&#x7528;<code>layer.querySelector</code>&#x6216;&#x8005;<code>layer.querySelectorAll</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x63D2;&#x5165;&#x7684; html &#x5143;&#x7D20;&#x9700;&#x8981;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#xFF0C;&#x806A;&#x660E;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5C06;<code>layer.ignoreEvents</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>false</code>&#x3002;Framer &#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x4E3A;&#x67D0;&#x4E9B;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E00;&#x9879;&#x3002;&#x6CE8;&#x610F;&#x5F53;&#x4F60;&#x7B2C;&#x4E00;&#x6B21;&#x8BBE;&#x5B9A; html &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4FDD;&#x6709;&#x7684;&#x56FE;&#x5C42;&#x7ED3;&#x6784;&#x4F1A;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#x63D2;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5143;&#x7D20;&#x4E2D;&#x53BB;&#x3002;</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="hljs-keyword">new</span> Layer
+
+<span class="hljs-comment"># Add simple text content</span>
+layerA.html = <span class="hljs-string">&quot;Hello&quot;</span>
+
+<span class="hljs-comment"># Add inline styled text content</span>
+layerA.html = <span class="hljs-string">&quot;I&apos;m &lt;span styled=&apos;color:red&apos;&gt;Kaen&lt;/span&gt;&quot;</span>
+
+<span class="hljs-comment">#Add an input field</span>
+layerA.html = <span class="hljs-string">&quot;&lt;input type=&apos;text&apos; value=&apos;Hello&apos;&gt;&quot;</span>
+
+<span class="hljs-comment">#Add a div with a canvas element and get a reference</span>
+layerA.html = <span class="hljs-string">&quot;&lt;div&gt;&lt;canvas id=&apos;canvas&apos;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span>
+canvasElement = layerA.querySelectorAll(<span class="hljs-string">&apos;#canvas&apos;</span>)
+</code></pre>
+<h2 id="layer-style-object">layer.style<code>&lt;object&gt;</code></h2>
 
                     
                     </section>
